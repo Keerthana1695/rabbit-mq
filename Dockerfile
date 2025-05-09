@@ -1,11 +1,10 @@
-# Dockerfile
 FROM python:3.10-slim
 
 WORKDIR /app
 COPY . /app
 
-RUN pip install --no-cache-dir flask pika
+RUN pip install flask pika
 
-EXPOSE 5000
+EXPOSE 8080
 
-CMD ["python", "app.py"]
+CMD ["python", "rabbit.py"]
